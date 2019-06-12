@@ -15,7 +15,10 @@ class App < Sinatra::Base
   get '/say/:number/:phrase' do 
     @number = params[:number]
     @phrase = params[:phrase]
-    when @number.is_a? Integer do 
+    if @number >= 1 
+      @phrase
+      @number -= 1 
+    end 
       
       
   end 
